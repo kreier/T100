@@ -41,12 +41,12 @@ void loop() {
       motor1.run(RELEASE);      // stopped
       motor4.run(RELEASE);
     }
-    if (BTinput == 'T')// down
+    if (BTinput == 'T')// Turbo
     {
       motor1.setSpeed(254);
       motor4.setSpeed(254);
     }
-    if (BTinput == 'o')// left
+    if (BTinput == 'o')// back to normal speed
     {
       motor1.setSpeed(100);
       motor4.setSpeed(100);

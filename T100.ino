@@ -1,4 +1,4 @@
-#include <AFMotor.h>
+#include <AFMotor.h> // download from subdirectory 'library' here and install zip file
 #include <SoftwareSerial.h>
  
 AF_DCMotor motor1(1, MOTOR12_64KHZ); // create motor #1, 64KHz pwm

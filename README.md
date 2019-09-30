@@ -45,7 +45,7 @@ The bluetooth module HC-05 (as well as HC-06) are only Bluetooth 2.0 and don't w
 
 I uploaded [a timelapse video](https://youtu.be/CzpAYpl62GI) about the creation of this robot in 30 seconds. It took 2 hours.
 
-![[30 seconds](image/30seconds.jpg)](https://youtu.be/CzpAYpl62GI)
+[![30 seconds](image/30seconds.jpg)](https://youtu.be/CzpAYpl62GI)
 
 ## Further details
 

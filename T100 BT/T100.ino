@@ -1,9 +1,9 @@
 #include <AFMotor.h> // download from subdirectory 'library' here and install zip file
-#include <SoftwareSerial.h>
+#include <SoftwareSerial.h> 
  
 AF_DCMotor motor1(1, MOTOR12_64KHZ); // create motor #1, 64KHz pwm
 AF_DCMotor motor4(4, MOTOR12_64KHZ); // create motor #2, 64KHz pwm
-SoftwareSerial BTSerial(2, 3);   // RX | TX
+SoftwareSerial BTSerial(2, 3);   // RX | TX - only RX on pin 2 (recieve) 2018-11-18
 char BTinput = '0';
 
 void setup() {

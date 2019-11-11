@@ -27,17 +27,16 @@ The Arduino is programmed by the Arduino IDE. Make sure it is installed on your 
 This robot needs an additional library to work. You can download the required file here: [AFMotor.zip](AFMotor.zip).
 
 - __November 2018__ Next you can download the very program (T100.ino) and install on your Arduino.
-- __November 2019__ There is some software for BLE for both iOS and Android. Therefore download (../T100ble.ino) and install on your Arduino.
+- __November 2019__ There is some software for BLE for both iOS and Android. Therefore download (../T100ble.ino) and install on your Arduino. Remote software for Android is [BLEJoystick](https://play.google.com/store/apps/details?id=iyok.com.blejoystick&hl=en). For iOS you can use [BitBlue](https://apps.apple.com/us/app/bitblue/id1403675953) and program the buttons as ligned out below.
 
 ## Control your robot with your smartphone 
 
-__November 2018__ This initial release works only with Bluetooth 2.0 and is therefore not supported by an iOS devide. Download the following software for your Android Smartphone:
-
-- List would be depreceated anyways.
+__November 2018__ This initial release works only with Bluetooth 2.0 and is therefore not supported by an iOS devide. Download the following software for your Android Smartphone... (Software removed beginnin of 2019 from Playstore).
 
 ### November 2019
 
-Use BitBlue for iOS and BLE joystick on Android.
+- Android [BLEJoystick](https://play.google.com/store/apps/details?id=iyok.com.blejoystick&hl=en)
+- iOS [BitBlue](https://apps.apple.com/us/app/bitblue/id1403675953)
 
 ### Key programming
 

@@ -7,7 +7,7 @@
 
 This is our first working sample of a remotely controlled robot at the American International School Vietnam. It has been build in September 2018. That's how it looks:
 
-![Robot](docs/panorama.jpg)
+![Robot](panorama.jpg)
 
 The software for the Arduino is [T100.ino](T100.ino). Library and Android software are described further down.
 
@@ -40,7 +40,7 @@ All materials were ordered at [CỬA HÀNG IC ĐÂY RỒI](https://icdayroi.com/
   
 Your result should work:
 
-![Window view](docs/window-view.jpg)
+![Window view](window-view.jpg)
 
 ## Limitations
 
@@ -50,7 +50,7 @@ The bluetooth module HC-05 (as well as HC-06) are only Bluetooth 2.0 and don't w
 
 I uploaded [a timelapse video](https://youtu.be/CzpAYpl62GI) about the creation of this robot in 30 seconds. It took 2 hours.
 
-[![30 seconds](docs/30seconds.jpg)](https://youtu.be/CzpAYpl62GI)
+[![30 seconds](30seconds.jpg)](https://youtu.be/CzpAYpl62GI)
 
 ## Code
 

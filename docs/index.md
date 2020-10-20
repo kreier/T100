@@ -2,8 +2,6 @@
 
 [![GitHub release](https://img.shields.io/github/release/kreier/T100.svg)](https://GitHub.com/kreier/T100/releases/)
 [![MIT license](https://img.shields.io/github/license/kreier/T100?color=brightgreen)](https://kreier.mit-license.org/)
-[![Build Status](https://travis-ci.com/kreier/T100.svg?branch=master)](https://travis-ci.com/kreier/T100)
-[![HitCount](http://hits.dwyl.io/kreier/T100.svg)](http://hits.dwyl.io/kreier/T100)
 
 This is our first working sample of a remotely controlled robot at the American International School Vietnam. It has been build in September 2018. That's how it looks:
 

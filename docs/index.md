@@ -7,7 +7,7 @@ This is our first working sample of a remotely controlled robot at the American 
 
 ![Robot](panorama.jpg)
 
-The software for the Arduino is [T100.ino](T100.ino). Library and Android software are described further down.
+The software for the Arduino is [T100.ino](https://github.com/kreier/T100/blob/master/T100.ino). Library and Android software are described further down.
 
 ## Materials
 
@@ -27,7 +27,7 @@ All materials were ordered at [CỬA HÀNG IC ĐÂY RỒI](https://icdayroi.com/
 * Assemble the robot
 * Connect the motors to M1 and M4 on the L293D shield
 * Add the AFMotor.h motor library (library/AFMotor.zip) in the Arduino IDE
-* Upload the program [T100.ino](T100.ino) to your Arduino Uno
+* Upload the program [T100.ino](https://github.com/kreier/T100/blob/master/T100.ino) to your Arduino Uno
 * Install the software [Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.satech.arduinocontroller) to your Android phone
 * Connect to the bluetooth module of the robot
 * Configure the keys of the remote the following:
@@ -42,7 +42,7 @@ Your result should work:
 
 ## Limitations
 
-The bluetooth module HC-05 (as well as HC-06) are only Bluetooth 2.0 and don't work with iOS, since iOS requires Bluetooth 4.0 Low Energy (BLE). We created the T-110 with the AR-06 BLE (Bluetooth Low Energy - Bluetooth 4.0) module. This project is [described here as T110](../../../T110).
+The bluetooth module HC-05 (as well as HC-06) are only Bluetooth 2.0 and don't work with iOS, since iOS requires Bluetooth 4.0 Low Energy (BLE). We created the T-110 with the AR-06 BLE (Bluetooth Low Energy - Bluetooth 4.0) module. This project is [described here as T110](../T110).
 
 ## Video about build in 30 seconds
 
@@ -61,7 +61,9 @@ I uploaded [a timelapse video](https://youtu.be/CzpAYpl62GI) about the creation 
  
 AF_DCMotor motor1(1, MOTOR12_64KHZ); // create motor #1, 64KHz pwm
 AF_DCMotor motor4(4, MOTOR12_64KHZ); // create motor #2, 64KHz pwm
-SoftwareSerial BTSerial(A0, 3);   // RX | TX  -  pin 2 creates errors on my motor shield, analog pin is fine ...
+SoftwareSerial BTSerial(A0, 3);      // RX | TX  on A0 and D3 because
+//    pin 2 creates errors on my motor shield, analog pin is fine ...
+
 char BTinput = '0';
 byte speed = 200;
 

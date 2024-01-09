@@ -1,5 +1,7 @@
+// updated driver for my old T100 from 2018 to run with Galaxy Note10 and BlueDuino
+
 #include <AFMotor.h> // download from subdirectory 'library' here and install zip file
-#include <SoftwareSerial.h>
+#include <SoftwareSerial.h>  // updated to match T300 with key assignment
 
 #define LED_PIN 13
  
@@ -7,60 +9,81 @@ AF_DCMotor motor1(1, MOTOR12_64KHZ); // create motor #1, 64KHz pwm
 AF_DCMotor motor4(4, MOTOR12_64KHZ); // create motor #2, 64KHz pwm
 SoftwareSerial BTSerial(A0, 3);   // RX | TX  -  pin 2 creates errors on my motor shield, analog pin is fine ...
 char BTinput = '0';
-byte speed = 200;
+int speed = 200;
+byte react_to_zero = 1;
+byte received_speed_change = 0;
 
 void setup() {
   motor1.setSpeed(100);
   motor4.setSpeed(100);     // set the speed to 200/255
-  BTSerial.begin(9600);  // HC-10 default speed
-  Serial.begin(57600);   // just to check while programming
+  BTSerial.begin(38400);    // its not 9600 - this drove me nuts! HC-10 default speed?
+  Serial.begin(57600);      // just to check while programming
+  Serial.print( BTinput );
 }
  
 void loop() {
   if (BTSerial.available()) 
   {
     BTinput = BTSerial.read();
-    if (BTinput == 'A')// up
+    if (BTinput == 'w')      // forward  - A
     {
       motor1.run(FORWARD);
       motor4.run(FORWARD);
     }
-    if (BTinput == 'C')// down
+    if (BTinput == 's')      // backward - C
     {
       motor1.run(BACKWARD);
       motor4.run(BACKWARD);
     }
-    if (BTinput == 'D')// left
+    if (BTinput == 'd')      // left     - D
     {
       motor1.run(FORWARD);
       motor4.run(BACKWARD);
     }
-    if (BTinput == 'B')// right
+    if (BTinput == 'a')      // right    - B
     {
       motor1.run(BACKWARD);
       motor4.run(FORWARD);
     }      
-    if (BTinput == 'G')  // that's the "X" key
+    if (BTinput == 'b')      // that's the "X" key      - G
     {
       motor1.run(RELEASE);      // stopped
       motor4.run(RELEASE);
     }
-    if (BTinput == 'E')// faster - plus 10 - triangle
+    if (BTinput == 'x')  // faster - plus 10  - circle  - F
     {
       speed = speed + 10;
+      received_speed_change = 1;
     }
-    if (BTinput == 'H')// slower - minus 10 - square
+    if (BTinput == 'c')  // slower - minus 10 - square  - H
     {
       speed = speed - 10;
+      received_speed_change = 1;
     } 
-    if (BTinput == 'F')// maximum speed - circle
+    if (BTinput == 'v')  // Toggle response to zero
     {
-      speed = 255;
+      if (react_to_zero == 1) {
+        react_to_zero = 0;
+      } 
+      else {
+        react_to_zero = 1;
+      }
     }
+    if (BTinput == '0')  // stop signal received
+    {
+      if ((received_speed_change == 0) && (react_to_zero == 1)) {
+        motor1.run(RELEASE);      // stopped
+        motor4.run(RELEASE);
+      }
+    }
+
     if( speed > 255 ) speed = 255;
+    if( speed < 0   ) speed = 0;
+    received_speed_change = 0;
     motor1.setSpeed(speed);
     motor4.setSpeed(speed);
-    Serial.print("recieved: ");
+    Serial.print(millis());
+    Serial.print(" recieved: ");
     Serial.print( BTinput );
     Serial.print(" speed: ");
     Serial.println( speed );

@@ -1,4 +1,5 @@
-// updated driver for my old T100 from 2018 to run with Galaxy Note10 and BlueDuino
+// updated original sketch from 2018 to run 2024/01/29
+// with my Galaxy Note 20 and BlueDuino 
 
 #include <AFMotor.h> // download from subdirectory 'library' here and install zip file
 #include <SoftwareSerial.h>  // updated to match T300 with key assignment

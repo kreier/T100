@@ -51,8 +51,9 @@ I uploaded [a timelapse video](https://youtu.be/CzpAYpl62GI) about the creation 
 
 [![30 seconds](docs/30seconds.jpg)](https://youtu.be/CzpAYpl62GI)
 
-## Code
+## Code from 2018
 
+For the most recent version look at [T100.ino](https://github.com/kreier/T100/blob/master/T100.ino).
 
 ```cpp
 #include <AFMotor.h> // download from subdirectory 'library' here and install zip file
@@ -129,3 +130,10 @@ void loop() {
 ## Further details
 
 Details, instructions and pictures can be found in the [Wiki](https://github.com/kreier/T100/wiki). 
+
+## Reactivation 2024
+
+With some minor changes I made it work again in 2024 - mainly the bluetooth connection part and used app was a challenge. See the new [Release notes](https://github.com/kreier/T100/releases/tag/v0.2.2401) for more details. That's how it looks:
+
+![T100 in 2024](docs/T100_2024.jpeg)
+

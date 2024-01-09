@@ -3,7 +3,6 @@
 [![GitHub release](https://img.shields.io/github/release/kreier/T100.svg)](https://GitHub.com/kreier/T100/releases/)
 [![MIT license](https://img.shields.io/github/license/kreier/T100?color=brightgreen)](https://kreier.mit-license.org/)
 [![Build Status](https://travis-ci.com/kreier/T100.svg?branch=master)](https://travis-ci.com/kreier/T100)
-[![HitCount](http://hits.dwyl.io/kreier/T100.svg)](http://hits.dwyl.io/kreier/T100)
 
 This is our first working sample of a remotely controlled robot at the American International School Vietnam. It has been build in September 2018. That's how it looks:
 
@@ -30,7 +29,7 @@ All materials were ordered at [CỬA HÀNG IC ĐÂY RỒI](https://icdayroi.com/
 * Connect the motors to M1 and M4 on the L293D shield
 * Add the AFMotor.h motor library (library/AFMotor.zip) in the Arduino IDE
 * Upload the program [T100.ino](T100.ino) to your Arduino Uno
-* Install the software [Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.satech.arduinocontroller) to your Android phone
+* Install the software [Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller) to your Android phone (old [link from 2018](https://play.google.com/store/apps/details?id=com.satech.arduinocontroller) no longer works in 2024)
 * Connect to the bluetooth module of the robot
 * Configure the keys of the remote the following:
   - "U" for up

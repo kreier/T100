@@ -10,6 +10,8 @@ AF_DCMotor motor4(4, MOTOR12_64KHZ); // create motor #2, 64KHz pwm
 SoftwareSerial BTSerial(A0, 3);   // RX | TX  -  pin 2 creates errors on my motor shield, analog pin is fine ...
 char BTinput = '0';
 int speed = 200;
+byte react_to_zero = 1;
+byte received_speed_change = 0;
 
 void setup() {
   motor1.setSpeed(100);
@@ -51,17 +53,33 @@ void loop() {
     if (BTinput == 'x')  // faster - plus 10  - circle  - F
     {
       speed = speed + 10;
+      received_speed_change = 1;
     }
     if (BTinput == 'c')  // slower - minus 10 - square  - H
     {
       speed = speed - 10;
+      received_speed_change = 1;
     } 
-    if (BTinput == 'v')  // turbo, fastest - triangle   - E
+    if (BTinput == 'v')  // Toggle response to zero
     {
-      speed = 255;
+      if (react_to_zero == 1) {
+        react_to_zero = 0;
+      } 
+      else {
+        react_to_zero = 1;
+      }
     }
+    if (BTinput == '0')  // stop signal received
+    {
+      if ((received_speed_change == 0) && (react_to_zero == 1)) {
+        motor1.run(RELEASE);      // stopped
+        motor4.run(RELEASE);
+      }
+    }
+
     if( speed > 255 ) speed = 255;
     if( speed < 0   ) speed = 0;
+    received_speed_change = 0;
     motor1.setSpeed(speed);
     motor4.setSpeed(speed);
     Serial.print(millis());

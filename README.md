@@ -29,7 +29,7 @@ All materials were ordered at [CỬA HÀNG IC ĐÂY RỒI](https://icdayroi.com/
 * Connect the motors to M1 and M4 on the L293D shield
 * Add the AFMotor.h motor library (library/AFMotor.zip) in the Arduino IDE
 * Upload the program [T100.ino](T100.ino) to your Arduino Uno
-* Install the software [Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller) to your Android phone (old [link from 2018](https://play.google.com/store/apps/details?id=com.satech.arduinocontroller) no longer works in 2024)
+* Install the software [BlueDuino](https://play.google.com/store/apps/details?id=com.app.aktham.blueduino&hl=en&gl=US) or [Arduino Bluetooth Controller](https://play.google.com/store/apps/details?id=com.appsvalley.bluetooth.arduinocontroller) to your Android phone (old [link from 2018](https://play.google.com/store/apps/details?id=com.satech.arduinocontroller) no longer works in 2024)
 * Connect to the bluetooth module of the robot
 * Configure the keys of the remote the following:
   - "U" for up

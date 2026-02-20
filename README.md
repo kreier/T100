@@ -137,3 +137,8 @@ With some minor changes I made it work again in 2024 - mainly the bluetooth conn
 
 ![T100 in 2024](docs/T100_2024.jpeg)
 
+## BLE with a simple AT-09 CC2541? Or ESP32C3?
+
+Jeffrey started a new project with a remotely contolled car with 2 motors and a steering servo. Brain is a self-developed mainboard from JLCPCB with an ESP32C3 brain and two L9110s motor drivers, LiPo charging circuit etc. Programmed in C from Arduino IDE or NeoVim and bash script with arduino-cli.
+
+Two years ago I worked with the bluetooth modules [AT-09 CC2541](https://www.thegioiic.com/at-09-cc2541-mach-thu-phat-bluetooth-4-0) (like [a clone of a clone from 2017](https://blog.yavilevich.com/2017/03/mlt-bt05-ble-module-a-clone-of-a-clone/) that bothered me back in October 2018 until I moved to [T110](https://github.com/kreier/T110) in early 2019 and finally to the ESP32 with the [T200](https://github.com/kreier/T200) running in April 2019. DFRobot BLE controller is no longer available. And [CC2541 modules](https://www.thegioiic.com/hm-10s-cc2541-mach-thu-phat-bluetooth-4-0-ra-chan-giao-tiep-uart) cost as much as a [full ESP32 NodeMCU](https://www.thegioiic.com/esp32-nodemcu-luanode32-module-thu-phat-wifi-30-chan)! Strange times. [Esp32-c3 SuperMini](https://shopee.vn/ESP32-C3-ESP32-S3-Ban-Ph%C3%A1t-Tri%E1%BB%83n-ESP32-C3-SuperMini-WiFi-Bluetooth-ESP32C3-B%E1%BA%A3ng-M%E1%BB%9F-R%E1%BB%99ng%E2%9C%A8CircuitVina-Mall%E2%9C%A8-i.1724990669.50505714776) just 50,461 VND.
